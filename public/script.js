@@ -6,7 +6,7 @@ document.getElementById("userForm").addEventListener("submit", async (e) => {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
 
-    const response = await fetch(`${API_URL}/add-user`, {
+    const response = await fetch("/api/users/add-user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
@@ -17,7 +17,7 @@ document.getElementById("userForm").addEventListener("submit", async (e) => {
 });
 
 document.getElementById("getUsers").addEventListener("click", async () => {
-    const response = await fetch(`${API_URL}/get-users`);
+    const response = await fetch("/api/users/get-users");
     const users = await response.json();
 
     const userList = document.getElementById("userList");
