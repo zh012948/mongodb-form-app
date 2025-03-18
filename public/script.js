@@ -1,3 +1,5 @@
+const API_URL = "https://mongodb-form-app-brfv.onrender.com";
+
 document.getElementById("userForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
